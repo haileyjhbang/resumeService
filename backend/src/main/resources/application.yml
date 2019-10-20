@@ -1,0 +1,26 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/resume?characterEncoding=UTF-8&serverTimezone=UTC
+    username: bang
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+        format_sql: true
+        use-new-id-generator-mappings: false
+
+    open-in-view: false
+  resources:
+    cache:
+      # 4 years.
+      period: 126230400
+
+logging:
+  level:
+    org:
+      hibernate:
+        SQL: DEBUG
+      springframework:
+        security: DEBUG
